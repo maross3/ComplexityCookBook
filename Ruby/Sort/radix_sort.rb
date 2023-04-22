@@ -2,8 +2,8 @@
 
 module RadixSort
   def self.sort(array)
-    maxLen = get_max_length(array)
-    (0..maxLen - 1).each do |i|
+    max_len = get_max_length(array)
+    (0..max_len - 1).each do |i|
       buckets = Array.new(10) { Array.new }
       array.each do |j| buckets[get_digit(j, i)].push(j) end
       array = flatten(buckets)
@@ -20,8 +20,8 @@ module RadixSort
     array = []
     buckets.each do |k|
       array.push(k)
-      array.flatten!
     end
+    array.flatten!
     return array
   end
 
