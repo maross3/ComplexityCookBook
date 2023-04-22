@@ -1,0 +1,37 @@
+# Editors
+.idea/
+.vs/
+
+# js/ts packages
+node_modules/
+
+# .NET
+bin/
+obj/
+
+# VS C++
+x64/
+x86/
+*.exe
+
+# CMake
+cmake-build-debug/
+
+# Ignore Gemfile.lock
+Gemfile.lock
+
+# Ignore vendor directory
+/vendor/
+
+# Ignore coverage directory
+/coverage/
+
+# Ignore log directory
+/log/
+
+# Ignore tmp directory
+/tmp/
+
+# Ignore minitest temp and report directories
+/test/tmp/
+/test/reports/
