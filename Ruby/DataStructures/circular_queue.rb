@@ -2,17 +2,17 @@
 
 class CircularQueue
 
-  def enqueue(value)
-    @tail = self.advance(@head) if @queue[@head] != nil
-    @queue[@head] = value
-    @head = self.advance(@head)
-  end
-
   def dequeue
     element = @queue[@tail]
     @queue[@tail] = nil
-    @tail = self.advance(@tail) if element != nil
+    @tail = advance(@tail) if element != nil
     element
+  end
+
+  def enqueue(value)
+    @tail = advance(@head) if @queue[@head] != nil
+    @queue[@head] = value
+    @head = advance(@head)
   end
 
   def initialize(size)
